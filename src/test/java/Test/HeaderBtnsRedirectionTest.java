@@ -17,11 +17,16 @@ public class HeaderBtnsRedirectionTest extends BaseTest {
 
     @Test
     public void HeaderBtnsRedirectionTest() {
-        loekHomePageRedirections.logoBtnLeadsToHomePage();
+        //loekHomePageRedirections.logoBtnLeadsToHomePage();
         loekHomePageRedirections.aboutUsBtnLeadsToOverOnsPage();
-        Assert.assertEquals("https://loekonline.nl/", loekHomePageRedirections.logoBtnLeadsToHomePage());
-        Assert.assertEquals("https://loekonline.nl/prijzen/", loekHomePageRedirections.aboutUsBtnLeadsToOverOnsPage());
+        loekHomePageRedirections.pricesBtnLeadsToPricesPage();
+        loekHomePageRedirections.contactBtnleadsToContactPage();
+        loekHomePageRedirections.loginBtnleadsToLoginPage();
+        //Assert.assertEquals("https://loekonline.nl/", loekHomePageRedirections.logoBtnLeadsToHomePage());
+        Assert.assertEquals("https://loekonline.nl/over-ons/", loekHomePageRedirections.aboutUsBtnLeadsToOverOnsPage());
+        Assert.assertEquals("https://loekonline.nl/prijzen/", loekHomePageRedirections.pricesBtnLeadsToPricesPage());
+        Assert.assertEquals("https://loekonline.nl/contact/", loekHomePageRedirections.contactBtnleadsToContactPage());
+        Assert.assertEquals("https://app.loekonline.nl/user/login", loekHomePageRedirections.loginBtnleadsToLoginPage());
+
     }
-
-
 }

@@ -17,7 +17,10 @@ public class HeaderBtnsRedirectionTest extends BaseTest {
 
     @Test
     public void HeaderBtnsRedirectionTest() {
+        loekHomePageRedirections.logoBtnLeadsToHomePage();
+        loekHomePageRedirections.aboutUsBtnLeadsToOverOnsPage();
         Assert.assertEquals("https://loekonline.nl/", loekHomePageRedirections.logoBtnLeadsToHomePage());
+        Assert.assertEquals("https://loekonline.nl/prijzen/", loekHomePageRedirections.aboutUsBtnLeadsToOverOnsPage());
     }
 
 

@@ -24,7 +24,7 @@ public class LoekHomePageRedirections extends BaseTest {
         return currentURL = "https://loekonline.nl/";
     }
 
-    public String aboutUsBtnLeadsToPrijzenPage(){
+    public String aboutUsBtnLeadsToOverOnsPage(){
         aboutUsBtn.click();
         String URL = driver.getCurrentUrl();
         return URL ="https://loekonline.nl/prijzen/";

@@ -24,6 +24,8 @@ public class LoekHomePageRedirections extends BaseTest {
     WebElement loginBtn;
     @FindBy(xpath = "//ul[@id='top-menu']/li[5]/a")
     WebElement registerBtn;
+    @FindBy(css = ".et_pb_promo_button")
+    WebElement registerNowBtn;
 
     // Header buttons redirections next x methods
 
@@ -57,6 +59,11 @@ public class LoekHomePageRedirections extends BaseTest {
         registerBtn.click();
         String URL = driver.getCurrentUrl();
         return URL = "https://app.loekonline.nl/user/register";
+    }
+    public String registerNowBtnLeadsToRegistrationPage(){
+        registerNowBtn.click();
+        String URL6 = driver.getCurrentUrl();
+        return URL6 = "https://app.loekonline.nl/user/register";
     }
 
 }

@@ -27,6 +27,5 @@ public class HeaderBtnsRedirectionTest extends BaseTest {
         Assert.assertEquals("https://loekonline.nl/prijzen/", loekHomePageRedirections.pricesBtnLeadsToPricesPage());
         Assert.assertEquals("https://loekonline.nl/contact/", loekHomePageRedirections.contactBtnleadsToContactPage());
         Assert.assertEquals("https://app.loekonline.nl/user/login", loekHomePageRedirections.loginBtnleadsToLoginPage());
-
     }
 }

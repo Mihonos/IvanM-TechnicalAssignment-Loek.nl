@@ -14,7 +14,7 @@ public class LoekHomePageRedirections extends BaseTest {
 
     @FindBy(css = "#logo")
     WebElement logoBtn;
-    @FindBy(className = ".menu-item-23980:not(.et_first_mobile_item)")
+    @FindBy(xpath = "//ul[@id='top-menu']/li[1]")
     WebElement aboutUsBtn;
     @FindBy(xpath = "//ul[@id='top-menu']/li[2]")
     WebElement pricesBtn;
@@ -24,46 +24,39 @@ public class LoekHomePageRedirections extends BaseTest {
     WebElement loginBtn;
     @FindBy(xpath = "//ul[@id='top-menu']/li[5]/a")
     WebElement registerBtn;
-    @FindBy(className = ".et_pb_promo_button")
+    @FindBy(className = "et_pb_promo_button")
     WebElement registerNowBtn;
 
     // Header buttons redirections next x methods
 
     public String logoBtnLeadsToHomePage(){
         logoBtn.click();
-        String currentURL = driver.getCurrentUrl();
-        return currentURL = "https://loekonline.nl/";
+        return driver.getCurrentUrl();
     }
     public String aboutUsBtnLeadsToOverOnsPage(){
         aboutUsBtn.click();
-        String URL = driver.getCurrentUrl();
-        return URL ="https://loekonline.nl/over-ons/";
+        return driver.getCurrentUrl();
     }
     public String pricesBtnLeadsToPricesPage(){
         pricesBtn.click();
-        String URL = driver.getCurrentUrl();
-        return URL ="https://loekonline.nl/prijzen/";
+        return driver.getCurrentUrl();
     }
     public String contactBtnleadsToContactPage(){
         contactBtn.click();
-        String URL = driver.getCurrentUrl();
-        return URL ="https://loekonline.nl/contact/";
+        return driver.getCurrentUrl();
     }
     public String loginBtnleadsToLoginPage(){
         loginBtn.click();
-        String URL = driver.getCurrentUrl();
-        return URL ="https://app.loekonline.nl/user/login";
+        return driver.getCurrentUrl();
     }
     public String registerBtnleadsToRegistrationPage() {
         wdWait.until(ExpectedConditions.elementToBeClickable(registerBtn));
         registerBtn.click();
-        String URL = driver.getCurrentUrl();
-        return URL = "https://app.loekonline.nl/user/register";
+        return driver.getCurrentUrl();
     }
     public String registerNowBtnLeadsToRegistrationPage(){
         registerNowBtn.click();
-        String URL6 = driver.getCurrentUrl();
-        return URL6 = "https://app.loekonline.nl/user/register";
+        return driver.getCurrentUrl();
     }
 
 }

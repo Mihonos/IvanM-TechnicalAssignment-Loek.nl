@@ -12,9 +12,9 @@ public class LoekHomePageRedirections extends BaseTest {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(id = "logo")
+    @FindBy(css = "#logo")
     WebElement logoBtn;
-    @FindBy(css = ".menu-item-23980:not(.et_first_mobile_item)")
+    @FindBy(className = ".menu-item-23980:not(.et_first_mobile_item)")
     WebElement aboutUsBtn;
     @FindBy(xpath = "//ul[@id='top-menu']/li[2]")
     WebElement pricesBtn;
@@ -24,7 +24,7 @@ public class LoekHomePageRedirections extends BaseTest {
     WebElement loginBtn;
     @FindBy(xpath = "//ul[@id='top-menu']/li[5]/a")
     WebElement registerBtn;
-    @FindBy(css = ".et_pb_promo_button")
+    @FindBy(className = ".et_pb_promo_button")
     WebElement registerNowBtn;
 
     // Header buttons redirections next x methods
